@@ -1,0 +1,116 @@
+/*
+  style.css — Modern responsive styles for CareerPath AI
+  Color palette: blues and purples with white backgrounds
+*/
+
+:root{
+  --bg:#f7f9ff;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --primary-1:#6C5CE7; /* purple */
+  --primary-2:#00B4D8; /* teal */
+  --accent:linear-gradient(135deg,var(--primary-1),var(--primary-2));
+  --shadow: 0 8px 20px rgba(33,40,71,0.08);
+  --radius:14px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);color:#102a43;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+
+/* NAV */
+.nav-wrapper{backdrop-filter: blur(6px);background:rgba(255,255,255,0.6);box-shadow:0 2px 10px rgba(16,42,67,0.04);position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:700;color:var(--primary-1);text-decoration:none;font-size:1.25rem}
+.logo span{color:var(--primary-2)}
+.nav-links{display:flex;gap:0.75rem;align-items:center}
+.nav-links a{color:#112; text-decoration:none;padding:0.55rem 0.6rem;border-radius:10px;transition:all .18s}
+.nav-links a:hover{background:rgba(108,92,231,0.06);transform:translateY(-2px)}
+.btn{display:inline-block;padding:.6rem .9rem;border-radius:10px;border:0;cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--primary-1);color:white;box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;border:1px solid rgba(16,42,67,0.06)}
+.nav-toggle{display:none;background:none;border:0;padding:0.4rem;border-radius:8px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--primary-1);margin:4px 0;border-radius:2px}
+
+/* HERO */
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-content h1{font-size:2.1rem;margin:0 0 .6rem;color:var(--primary-1)}
+.hero-content p{color:var(--muted);margin-bottom:1rem}
+.hero-card{background:var(--card);border-radius:18px;padding:2rem;box-shadow:var(--shadow);display:flex;justify-content:center;align-items:center}
+.card-visual svg{width:100%;height:200px}
+
+/* How it works */
+.how-it-works{padding:3rem 0}
+.steps{display:flex;gap:1rem;margin-top:1rem}
+.step{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow);flex:1}
+.step-number{width:42px;height:42px;border-radius:10px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:.5rem}
+.muted{color:var(--muted)}
+
+/* Careers cards */
+.explore{padding:3rem 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.career-card{background:linear-gradient(180deg,rgba(255,255,255,0.8),var(--card));padding:1.2rem;border-radius:14px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s;cursor:pointer}
+.career-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(16,42,67,0.12)}
+.career-card:focus{outline:3px solid rgba(108,92,231,0.12)}
+
+/* AI assistant */
+.ai-assistant{padding:3rem 0}
+.chat-placeholder{display:flex;gap:1rem;align-items:center;background:linear-gradient(90deg,rgba(108,92,231,0.06),rgba(0,180,216,0.04));padding:1rem;border-radius:12px}
+.bot-icon{font-size:2rem}
+.bot-text{font-weight:600}
+
+/* Why choose */
+.why-choose{padding:3rem 0}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem}
+.feature{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+
+/* Form */
+.form-section{padding:3rem 0}
+.career-form{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow)}
+.career-form .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.career-form label{display:block;font-size:.95rem}
+.career-form input,.career-form select,.career-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(16,42,67,0.08);margin-top:.4rem}
+.form-actions{margin-top:1rem;display:flex;gap:.5rem}
+.form-message{margin-top:0.75rem;color:green;font-weight:600}
+.error{color:#e11d48;font-size:.85rem}
+
+/* Contact */
+.contact-section{padding:3rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form input,.contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(16,42,67,0.08);margin-bottom:.5rem}
+
+/* Footer */
+.footer{background:linear-gradient(180deg,white,var(--bg));padding:2rem 0;margin-top:2rem}
+.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.footer-links a{margin-right:1rem;color:var(--muted);text-decoration:none}
+.social a{margin-left:.5rem;text-decoration:none;font-size:1.1rem}
+.copyright{padding:0.75rem 0;color:var(--muted);font-size:.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:repeat(2,1fr)}
+  .career-form .grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:640px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:white;padding:1rem;border-bottom:1px solid rgba(16,42,67,0.04);flex-direction:column}
+  .nav-links.show{display:flex}
+  .nav-toggle{display:block}
+  .cards{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
+}
+
+/* Small interactive touches */
+.career-card h4{margin:0 0 .4rem}
+.step h3{margin:.25rem 0}
+.muted.small{font-size:.95rem}

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CareerPath AI — Discover Your Perfect Career Path with AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav-wrapper">
+    <div class="container nav">
+      <a class="logo" href="#">CareerPath <span>AI</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#explore">Explore Careers</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#get-started">Get Started</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Discover Your Perfect Career Path with AI</h1>
+          <p>CareerPath AI uses intelligent recommendations and tailored guidance to help you choose a career that fits your strengths and goals.</p>
+          <div class="hero-buttons">
+            <a href="#get-started" class="btn primary">Get Started</a>
+            <a href="#explore" class="btn ghost">Explore Careers</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-visual">
+            <!-- simple illustration placeholder -->
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#6C5CE7" />
+                  <stop offset="1" stop-color="#00B4D8" />
+                </linearGradient>
+              </defs>
+              <rect x="10" y="10" width="180" height="180" rx="20" fill="url(#g1)" opacity="0.12" />
+              <circle cx="100" cy="80" r="30" fill="#6C5CE7" opacity="0.95" />
+              <rect x="60" y="120" width="80" height="12" rx="6" fill="#00B4D8" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container how-it-works" id="about">
+      <h2>How It Works</h2>
+      <p class="muted">Three simple steps to find a career you love.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Tell Us About Yourself</h3>
+          <p>Share your background, education, and skills so we can understand your profile.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Explore Career Options</h3>
+          <p>Browse curated career categories and learn what each role involves.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Get Personalized Guidance</h3>
+          <p>Receive recommendations, learning plans, and next steps tailored to you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Careers -->
+    <section id="explore" class="container explore">
+      <h2>Explore Careers</h2>
+      <p class="muted">Popular career categories powered by insights.</p>
+      <div class="cards">
+        <article class="career-card" tabindex="0">
+          <h4>Software Development</h4>
+          <p>Build applications, systems, and services across platforms.</p>
+        </article>
+        <article class="career-card" tabindex="0">
+          <h4>Artificial Intelligence</h4>
+          <p>Design models, data pipelines, and intelligent systems.</p>
+        </article>
+        <article class="career-card" tabindex="0">
+          <h4>Graphic Design</h4>
+          <p>Create visual identities, UI, and brand communications.</p>
+        </article>
+        <article class="career-card" tabindex="0">
+          <h4>Digital Marketing</h4>
+          <p>Grow brands through strategy, content, and analytics.</p>
+        </article>
+        <article class="career-card" tabindex="0">
+          <h4>Cyber Security</h4>
+          <p>Protect systems and data with technical controls and strategy.</p>
+        </article>
+        <article class="career-card" tabindex="0">
+          <h4>Business</h4>
+          <p>Lead teams, strategy, operations, and entrepreneurship.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section class="container ai-assistant" id="assistant">
+      <h2>AI Assistant</h2>
+      <p class="muted">Chat with our AI assistant to get instant career advice.</p>
+      <div class="chat-placeholder">
+        <div class="bot-icon">🤖</div>
+        <div class="bot-text">Hi! I’m your AI Career Assistant. Ask me anything about your future career.</div>
+      </div>
+      <p class="muted small">(Botpress integration placeholder — chatbot will be added here later.)</p>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="container why-choose">
+      <h2>Why Choose CareerPath AI</h2>
+      <div class="features">
+        <div class="feature">
+          <h4>Personalized Guidance</h4>
+          <p>Recommendations based on your profile and goals.</p>
+        </div>
+        <div class="feature">
+          <h4>AI-Powered Recommendations</h4>
+          <p>Intelligent matching using data-driven insights.</p>
+        </div>
+        <div class="feature">
+          <h4>Career Resources</h4>
+          <p>Curated articles, courses, and role descriptions.</p>
+        </div>
+        <div class="feature">
+          <h4>Skill Development</h4>
+          <p>Actionable learning plans to close skill gaps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Guidance Form -->
+    <section id="get-started" class="container form-section">
+      <h2>Career Guidance Form</h2>
+      <p class="muted">Fill out this form to receive personalized career suggestions.</p>
+      <form id="careerForm" class="career-form" novalidate>
+        <div class="grid">
+          <label>
+            Full Name
+            <input type="text" name="name" id="name" placeholder="Your full name" required />
+            <span class="error" id="nameError"></span>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" id="email" placeholder="you@example.com" required />
+            <span class="error" id="emailError"></span>
+          </label>
+          <label>
+            Education Level
+            <select name="education" id="education" required>
+              <option value="">Select</option>
+              <option>High School</option>
+              <option>Associate Degree</option>
+              <option>Bachelor's Degree</option>
+              <option>Master's Degree</option>
+              <option>PhD</option>
+            </select>
+            <span class="error" id="educationError"></span>
+          </label>
+          <label>
+            Skills
+            <input type="text" name="skills" id="skills" placeholder="e.g., JavaScript, Python" />
+          </label>
+          <label>
+            Career Interests
+            <input type="text" name="interests" id="interests" placeholder="e.g., AI, Frontend" />
+          </label>
+          <label>
+            Preferred Career Type
+            <select name="type" id="type">
+              <option value="">Select</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Freelance</option>
+              <option>Internship</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit</button>
+          <button type="reset" class="btn ghost">Reset</button>
+        </div>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container contact-section">
+      <h2>Contact Us</h2>
+      <p class="muted">Have questions? Reach out to our team.</p>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Office:</strong> 123 Career Lane, City</p>
+          <p><strong>Email:</strong> hello@careerpath.ai</p>
+          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea placeholder="Your message" rows="4" required></textarea>
+          <div class="form-actions">
+            <button class="btn primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#">CareerPath <span>AI</span></a>
+        <p class="muted">AI-driven career guidance and learning plans.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="LinkedIn">🔗</a>
+        <a href="#" aria-label="GitHub">🐙</a>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> CareerPath AI. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
